@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
+li {
+  list-style: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -16,6 +25,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 p {
@@ -48,12 +58,12 @@ header,
     padding: 0 2.4rem;
   }
 
-  .mobile-background {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 10rem;
-    left: 0;
+  .headline-section {
+    background: #fff url("images/mobile-bg.png") no-repeat 100% 0%;
+    background-size: cover;
+    border-bottom-left-radius: 9rem;
+    padding-top: 12.8rem;
+    padding-bottom: 14rem;
   }
 
   header {
@@ -90,12 +100,6 @@ header,
 
   p.bio {
     margin-top: 1.2rem;
-    margin-bottom: 1.4rem;
-  }
-
-  .headline-section {
-    border-bottom-left-radius: 9rem;
-    padding-top: 12.8rem;
-    padding-bottom: 13.6rem;
+    margin-bottom: 2rem;
   }
 }

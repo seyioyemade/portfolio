@@ -120,7 +120,7 @@ You can deploy this project using:
 
 - GitHub: [@seyioyemade](https://github.com/seyioyemade)
 - Twitter: [@seyi_oyemade](https://twitter.com/@seyi_oyemade)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/seyi-oyemade-523ab1142/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
