@@ -1,4 +1,101 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #e5e5e5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-weight: 400;
+  color: #344563;
+  font-style: normal;
+}
+
+.connect {
+  font-weight: 500;
+  color: #7f8cff;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin-top: 1.2rem;
+}
+
+header,
+.headline-section {
+  background: #fff;
+}
+
+@media (min-width: 375px) {
+  header,
+  section {
+    padding: 0 2.4rem;
+  }
+
+  .mobile-background {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+  }
+
+  header {
+    padding-top: 5.8rem;
+  }
+
+  .mobile-menu {
+    margin-right: 1rem;
+    width: 18px;
+    height: 12px;
+  }
+
+  .logo {
+    width: 76px;
+    height: 20px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    color: #172b4d;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  p.bio {
+    margin-top: 1.2rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .headline-section {
+    border-bottom-left-radius: 9rem;
+    padding-top: 12.8rem;
+    padding-bottom: 13.6rem;
+  }
 }
