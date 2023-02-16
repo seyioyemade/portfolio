@@ -44,8 +44,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **It tells recruiters and hiring managers about me**
-- **It showcases my past projects**
+- It tells recruiters and hiring managers about me.
+- It showcases my past projects.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -54,7 +54,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,6 +129,15 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- Finish mobile version
+- Contact form
+- Desktop version
+- Application deploy
+- Evaluate accessibility
+- Mobile menu
+- Details modal
+- Validate contact form
+- Preserve data in the browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
