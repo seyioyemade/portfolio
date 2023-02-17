@@ -5,12 +5,21 @@
 }
 
 button {
-  border: none;
+  border: 1px solid #6070FF;
+  border-radius: 8px;
+  padding: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #396DF2; 
   background: none;
 }
 
 li {
-  list-style: none;
+  list-style-type: none;
 }
 
 html {
@@ -88,6 +97,7 @@ header,
 
   h1 {
     font-weight: 700;
+    font-style: normal;
     font-size: 4rem;
     line-height: 5.2rem;
     color: #172b4d;
@@ -102,4 +112,89 @@ header,
     margin-top: 1.2rem;
     margin-bottom: 2rem;
   }
+
+  .works {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 11.4rem;
+    row-gap: 8.8rem;
+  }
+
+  .works > section {
+    background: #FFFFFF;
+    padding: 1.6rem 1.6rem 2.8rem 1.6rem;
+    border: 1px solid #DFE1E6;
+    border-radius: 16px;
+  }
+
+  .works img {
+    width: 100%;
+    height: 220px;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    color: #172b4d;
+    margin-top: 1.3rem;
+  }
+
+  .canopy {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0px;
+  }
+
+  .canopy>h6 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: #344563;
+  }
+
+  ul.canopy-lists {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    margin-left: 3rem;
+    list-style-image: url(images/bullet.png);
+  }
+
+  ul.canopy-lists>li {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: #7A869A;
+    padding-left: 0.7rem
+  }
+
+  ul.categories{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    gap: 8px;
+    margin: 2rem 0px 2.4rem 0px;
+  }
+
+  ul.categories>li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.03em;
+    color: #6070FF;
+    background: #EBEBFF;
+    border-radius: 8px;
+    padding: 0.4rem 1.2rem;;
+  }
+
+  nav>button {
+    border: none;
+    
+  }
+
 }
