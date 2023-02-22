@@ -123,7 +123,7 @@
           <li><a href="https://github.com/seyioyemade"><img src="images/github-icon.svg" alt="github"></a></li>
           <li><a href="#"><img src="images/vector.svg" alt=""></a></li>
         </ul>
-        <button disabled>Get my resume</button>
+        <button>Get my resume</button>
         <ul class="about-categories">
           <li>Languages <span class="languages-arrrow"><img src="images/arrow-down.png" alt="arrow-down"></span>
             <ul>
@@ -144,13 +144,13 @@
         <form action="#" method="post">
           <ul>
             <li>
-              <input type="text" id="name" name="user_name" placeholder="Write your name here" />
+              <input type="text" id="name" name="user_name" placeholder="Write your name here" maxlength="30" required />
+            </li>
+            <li class="email">
+              <input type="email" id="email" name="user_email" placeholder="Write your email address here" required />
             </li>
             <li>
-              <input type="email" id="email" name="user_email" placeholder="Write your email address here" />
-            </li>
-            <li>
-              <textarea id="msg" name="user_message" placeholder="Write your message here"></textarea>
+              <textarea id="msg" name="user_message" placeholder="Write your message here" maxlength="500" required></textarea>
             </li>
             <li class="button">
               <button type="submit">Get in touch</button>
@@ -158,8 +158,6 @@
           </ul>
         </form>
         </div>
-        
-
       </section>
     </main>
   </div>
