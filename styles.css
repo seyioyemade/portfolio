@@ -61,6 +61,13 @@ nav > button {
   border: none;
 }
 
+.contact-form button {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.2rem 1.6rem;
+  margin-top: 2.2rem;
+}
+
 button:hover {
   box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   background: #6070ff;
@@ -68,6 +75,11 @@ button:hover {
 }
 
 button:focus {
+  background: #2230d2;
+  color: #fff;
+}
+
+.contact-form button:hover {
   background: #2230d2;
   color: #fff;
 }
@@ -271,5 +283,57 @@ h2 {
   border-top: 1px solid #dfe1e6;
   border-bottom: 1px solid #dfe1e6;
   padding: 2.4rem 0;
-  margin: 2.2rem 0;
+  margin: 2.2rem 0 11.4rem 0;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 0;
+}
+
+.contact-form > div {
+  padding: 10.3rem 2.4rem 4.5rem 2.4rem;
+  background: #6070ff url("images/contact-form-mobile-bg.png") no-repeat right;
+  background-size: contain;
+  border-top-left-radius: 9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form h2,
+.contact-form p {
+  color: #fff;
+  text-align: center;
+}
+
+.contact-form p {
+  margin: 1.4rem 0 4.7rem 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-weight: 400;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  outline: 1px solid #6070ff;
+}
+
+input {
+  color: #172b4d;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+textarea {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  color: #b3bac5;
+  height: 17rem;
+}
+
+.email {
+  margin: 2rem 0 1.8rem 0;
 }
