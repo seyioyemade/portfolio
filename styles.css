@@ -59,6 +59,7 @@ button {
   letter-spacing: 0.03em;
   color: #396df2;
   background: none;
+  transition: all 0.5s ease-out;
 }
 
 nav > button {
@@ -118,6 +119,18 @@ button:focus {
 .logo {
   width: 76px;
   height: 20px;
+  animation-duration: 3s;
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 h1 {
@@ -154,6 +167,11 @@ p.bio {
 .works img {
   width: 100%;
   height: auto;
+  transition: all 0.5s ease-out;
+}
+
+.works img:hover {
+  transform: scale(1.05);
 }
 
 h3 {
