@@ -54,6 +54,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://seyioyemade.github.io/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,6 +109,8 @@ To run tests, run the following command:
 ### Deployment
 
 You can deploy this project using:
+
+- GitHub Page
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -182,6 +186,3 @@ If you like this project and would love to show your support, please contact the
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
