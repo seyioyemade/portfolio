@@ -120,7 +120,7 @@ You can deploy this project using:
 ## 👥 Authors <a name="authors"></a>
 
 
-👤 **Author1**
+👤 **Seyi Oyemade**
 
 - GitHub: [@seyioyemade](https://github.com/seyioyemade)
 - Twitter: [@seyi_oyemade](https://twitter.com/@seyi_oyemade)
@@ -133,10 +133,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Finish mobile version
-- Contact form
-- Desktop version
-- Application deploy
 - Evaluate accessibility
 - Mobile menu
 - Details modal
@@ -151,9 +147,8 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
+Feel free to check the [issues page](https://github.com/seyioyemade/portfolio/issues).
 
--[https://github.com/seyioyemade/portfolio/issues]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
