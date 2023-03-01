@@ -48,7 +48,7 @@ p {
 }
 
 button {
-  border: 1px solid #6070ff;
+  border: 1px solid #0018f0;
   border-radius: 8px;
   padding: 1.2rem;
   font-style: normal;
@@ -75,7 +75,7 @@ nav > button {
 
 button:hover {
   box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-  background: #6070ff;
+  background: #0018f0;
   color: #fff;
 }
 
@@ -91,7 +91,7 @@ button:focus {
 
 .connect {
   font-weight: 500;
-  color: #7f8cff;
+  color: #1a30ff;
 }
 
 .social-media {
@@ -225,7 +225,7 @@ h3 {
   font-size: 1.2rem;
   line-height: 1.6rem;
   letter-spacing: 0.03em;
-  color: #6070ff;
+  color: #0018f0;
   background: #ebebff;
   border-radius: 8px;
   padding: 0.4rem 1.2rem;
@@ -316,7 +316,7 @@ h2 {
 
 .contact-form > div {
   padding: 10.3rem 2.4rem 4.5rem 2.4rem;
-  background: #6070ff url("images/contact-form-mobile-bg.png") no-repeat right;
+  background: #0018f0 url("images/contact-form-mobile-bg.png") no-repeat right;
   background-size: contain;
   border-top-left-radius: 9rem;
   display: flex;
@@ -341,7 +341,7 @@ textarea {
   font-weight: 400;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
-  outline: 1px solid #6070ff;
+  outline: 1px solid #0018f0;
 }
 
 input {
@@ -359,6 +359,10 @@ textarea {
 
 .email {
   margin: 2rem 0 1.8rem 0;
+}
+
+label {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -500,7 +504,7 @@ textarea {
 
   .contact-form > div {
     padding: 7.2rem 3.2rem 8.7rem 3.2rem;
-    background: #6070ff url("images/contact-form-desktop-bg.png") no-repeat center 15%;
+    background: #0018f0 url("images/contact-form-desktop-bg.png") no-repeat center 15%;
     background-size: contain;
     align-items: center;
   }
@@ -587,7 +591,7 @@ textarea {
   }
 
   .contact-form > div {
-    background: #6070ff url("images/contact-form-desktop-bg.png") no-repeat center bottom;
+    background: #0018f0 url("images/contact-form-desktop-bg.png") no-repeat center bottom;
     background-size: contain;
     padding: 14.2rem 3.2rem 12.7rem 3.2rem;
   }
