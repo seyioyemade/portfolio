@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Portfolio] <a name="about-project"></a>
+# 📖 Portfolio <a name="about-project"></a>
 
-**[Portfolio]** is a website that tells recruiters and hiring managers about me, and showcases my past projects.
+**Portfolio** is a website that tells recruiters and hiring managers about me, and showcases my past projects.
 
 ## 🛠 Built With <a name="built-with"></a>
 
