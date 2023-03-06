@@ -57,6 +57,7 @@ p {
   top: 0;
   background-color: #6070ffe3; 
   overflow-x: hidden;
+  backdrop-filter: blur(4px);
 }
 
 .mobile-menu-canvas ul {
@@ -200,7 +201,7 @@ p.bio {
 .works {
   display: grid;
   grid-template-columns: auto;
-  margin-top: 11.4rem;
+  padding-top: 11.4rem;
   row-gap: 8.8rem;
   background: #e5e5e5;
 }
@@ -498,7 +499,6 @@ label {
   }
 
   .works {
-    margin-top: 14.2rem;
     row-gap: 14.2rem;
   }
 
