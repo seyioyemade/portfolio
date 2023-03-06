@@ -47,6 +47,45 @@ p {
   font-style: normal;
 }
 
+.mobile-menu-canvas {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 1; 
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #6070ffe3; 
+  overflow-x: hidden;
+}
+
+.mobile-menu-canvas ul {
+  position: relative;
+  left: 2.8rem;
+  top: 10.6rem; 
+}
+
+.mobile-menu-canvas li>a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+}
+
+.mobile-menu-canvas li:nth-child(2) {
+  margin: 4rem 0
+}
+
+.show{
+  display: block;
+  position: fixed; 
+}
+
+.hide{
+  display: none; 
+}
+
 button {
   border: 1px solid #6070ff;
   border-radius: 8px;
@@ -64,6 +103,7 @@ button {
 
 nav > button {
   border: none;
+  padding: 0;
 }
 
 .contact-form button {
@@ -87,6 +127,11 @@ button:focus {
 .contact-form button:hover {
   background: #2230d2;
   color: #fff;
+}
+
+.nohover:hover {
+  background: none;
+  box-shadow: none;
 }
 
 .connect {
@@ -114,7 +159,13 @@ button:focus {
   margin-right: 1rem;
   width: 18px;
   height: 12px;
+  position: relative;
+  z-index: 2;
 }
+
+/* .close {
+  display: none;
+} */
 
 .logo {
   width: 76px;
