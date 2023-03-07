@@ -126,6 +126,10 @@ You can deploy this project using:
 - Twitter: [@seyi_oyemade](https://twitter.com/@seyi_oyemade)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/seyi-oyemade-523ab1142/)
 
+👤 **Md Sazzad Hossain**
+
+- GitHub: [@SAZZAD1Q2](https://github.com/SAZZAD1Q2)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
