@@ -209,6 +209,12 @@ button:focus {
   z-index: 2;
 }
 
+.close {
+  position: fixed;
+  z-index: 2;
+  right: 2.4rem;
+}
+
 .logo {
   width: 76px;
   height: 20px;
@@ -415,7 +421,10 @@ label {
 
 @media screen and (min-width: 768px) {
   header {
-    padding: 2.5rem 8rem 0 8rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding: 2.5rem 8rem 2.5rem 8rem
   }
 
   section {
@@ -469,7 +478,7 @@ label {
   .headline-section {
     background:
       #fff url("images/headline-section-bg-desktop.png") no-repeat
-      100% 10%;
+      100% 35%;
     background-size: contain;
     padding: 16.4rem 15rem 17.5rem 15rem;
   }
@@ -616,7 +625,7 @@ label {
 
 @media screen and (min-width: 1024px) {
   header {
-    padding: 2.5rem 15.5rem 0 15.5rem;
+    padding: 2.5rem 15.5rem 2.5rem 15.5rem
   }
 
   section {
@@ -626,7 +635,7 @@ label {
   .headline-section {
     background:
       #fff url("images/headline-section-bg-desktop.png") no-repeat
-      100% 35%;
+      100% 50%;
     background-size: contain;
     padding: 31.4rem 26rem 25.5rem 26rem;
   }
