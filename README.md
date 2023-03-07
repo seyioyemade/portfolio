@@ -133,7 +133,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Mobile menu
 - Details modal
 - Validate contact form
 - Preserve data in the browser
