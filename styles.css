@@ -170,6 +170,18 @@ button:focus {
   color: #fff;
 }
 
+.details-button > button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.popup-contents header > button {
+  border: none;
+  padding: 0;
+}
+
 .contact-form button:hover {
   background: #2230d2;
   color: #fff;
@@ -419,12 +431,99 @@ label {
   display: none;
 }
 
+.details-popup {
+  z-index: 2;
+  position: fixed;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(193, 199, 208, 0.5);
+  backdrop-filter: blur(4px);
+  overflow: auto;
+}
+
+.popup-contents {
+  z-index: 5;
+  position: fixed;
+  left: 1.6rem;
+  right: 1.6rem;
+  top: 6rem;
+  bottom: 5rem;
+  height: 100vh;
+  background-color: white;
+  padding: 2rem 1.6rem;
+  border-radius: 16px;
+  overflow: auto;
+}
+
+.popup-contents hr {
+  border: 1px solid #ebecf0;
+  margin: 0 0.5rem;
+}
+
+.popup-contents header > h3 {
+  margin: 0;
+}
+
+.popup-contents > header {
+  padding: 1rem 0 0 0;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.2rem;
+}
+
+.details-button {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.details-popup-close {
+  width: 14px;
+  height: 14px;
+  margin-right: 2rem;
+}
+
+.details-button > button:nth-child(1) {
+  padding: 1.4rem 2.6rem 1.4rem 2.2rem;
+}
+
+.details-button > button:nth-child(2) {
+  padding: 1.4rem;
+}
+
+.details-button > button:nth-child(1) > img {
+  width: 16px;
+  height: 16px;
+}
+
+.details-button > button:nth-child(2) > img {
+  width: 18px;
+  height: 20px;
+}
+
 @media screen and (min-width: 768px) {
   header {
     position: fixed;
     width: 100%;
     z-index: 1;
-    padding: 2.5rem 8rem 2.5rem 8rem
+    padding: 2.5rem 8rem 2.5rem 8rem;
+  }
+
+  .popup-contents header {
+    position: static;
+    padding: 0;
   }
 
   section {
@@ -621,11 +720,53 @@ label {
   .contact-form .button {
     text-align: center;
   }
+
+  .popup-contents {
+    z-index: 5;
+    position: fixed;
+    left: 14.2rem;
+    right: 14.2rem;
+    top: 7.7rem;
+    bottom: 7.7rem;
+    height: 100vh;
+    background-color: white;
+    padding: 2.4rem;
+  }
+
+  .popup-categories-buttons .categories {
+    margin: 0;
+  }
+
+  .popup-image {
+    margin-bottom: 5.9rem;
+  }
+
+  .popup-categories-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+
+  .popup-contents hr {
+    margin: 2rem 0;
+  }
+
+  .popup-categories-buttons > div:nth-child(1) {
+    width: 48%;
+  }
+
+  .details-button > button:nth-child(1) {
+    padding: 1rem 2.9rem 1rem 2.5rem;
+  }
+
+  .details-button > button:nth-child(2) {
+    padding: 1rem 1.2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   header {
-    padding: 2.5rem 15.5rem 2.5rem 15.5rem
+    padding: 2.5rem 15.5rem 2.5rem 15.5rem;
   }
 
   section {
@@ -658,5 +799,15 @@ label {
       center bottom;
     background-size: contain;
     padding: 14.2rem 3.2rem 12.7rem 3.2rem;
+  }
+
+  .popup-categories-buttons > div:nth-child(1) {
+    width: 57%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .popup-categories-buttons > div:nth-child(1) {
+    width: 67%;
   }
 }

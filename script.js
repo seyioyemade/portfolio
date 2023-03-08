@@ -19,24 +19,23 @@ for (let i = 0; i < mobileMenuIcons.length; i += 1) {
   });
 }
 
-
-let projects = [
+const projects = [
   {
     name: 'Tonic',
     dept: {
       name: 'canopy',
       role: 'Back End Dev',
-      year: 2015
+      year: 2015,
     },
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     featuredImage: 'images/work1.png',
     technologies: [
       'html',
       'css',
-      'javaScript'
+      'javaScript',
     ],
     linkToLiveVersion: '#',
-    linkToSource: '#'
+    linkToSource: '#',
   },
 
   {
@@ -44,17 +43,17 @@ let projects = [
     dept: {
       name: 'canopy',
       role: 'Back End Dev',
-      year: 2015
+      year: 2015,
     },
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     featuredImage: 'images/work2.png',
     technologies: [
       'html',
       'css',
-      'javaScript'
+      'javaScript',
     ],
     linkToLiveVersion: '#',
-    linkToSource: '#'
+    linkToSource: '#',
   },
 
   {
@@ -62,17 +61,17 @@ let projects = [
     dept: {
       name: 'canopy',
       role: 'Back End Dev',
-      year: 2015
+      year: 2015,
     },
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     featuredImage: 'images/work3.png',
     technologies: [
       'html',
       'css',
-      'javaScript'
+      'javaScript',
     ],
     linkToLiveVersion: '#',
-    linkToSource: '#'
+    linkToSource: '#',
   },
 
   {
@@ -80,41 +79,40 @@ let projects = [
     dept: {
       name: 'canopy',
       role: 'Back End Dev',
-      year: 2015
+      year: 2015,
     },
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     featuredImage: 'images/work4.png',
     technologies: [
       'html',
       'css',
-      'javaScript'
+      'javaScript',
     ],
     linkToLiveVersion: '#',
-    linkToSource: '#'
-  }
-]
+    linkToSource: '#',
+  },
+];
 
-for (let i = 0; i < projects.length; i++) {
-
-  let section = document.createElement('section');
-  let featuredImageDiv = document.createElement('div');
-  let featuredImg = document.createElement('img');
+for (let i = 0; i < projects.length; i += 1) {
+  const section = document.createElement('section');
+  const featuredImageDiv = document.createElement('div');
+  const featuredImg = document.createElement('img');
 
   featuredImg.src = projects[i].featuredImage;
   featuredImageDiv.appendChild(featuredImg);
   section.appendChild(featuredImageDiv);
 
-  let content = document.createElement('div');
+  const content = document.createElement('div');
   content.className = 'content';
-  let h3 = document.createElement('h3');
+  const h3 = document.createElement('h3');
   h3.textContent = projects[i].name;
   content.appendChild(h3);
-  let canopy = document.createElement('div');
+  const canopy = document.createElement('div');
   canopy.className = 'canopy';
-  let h6 = document.createElement('h6');
+  const h6 = document.createElement('h6');
   h6.textContent = projects[i].dept.name;
   canopy.appendChild(h6);
-  let canopyLists = document.createElement('ul');
+  const canopyLists = document.createElement('ul');
   canopyLists.className = 'canopy-lists';
   let li = document.createElement('li');
   li.textContent = projects[i].dept.role;
@@ -125,24 +123,130 @@ for (let i = 0; i < projects.length; i++) {
   canopy.appendChild(canopyLists);
   content.appendChild(canopy);
 
-  let description = document.createElement('p');
+  const description = document.createElement('p');
   description.textContent = projects[i].description;
   content.appendChild(description);
-  let categories = document.createElement('ul');
+  const categories = document.createElement('ul');
   categories.className = 'categories';
 
-  for (let j = 0; j < projects[i].technologies.length; j++) {
-    let li = document.createElement('li');
+  for (let j = 0; j < projects[i].technologies.length; j += 1) {
+    const li = document.createElement('li');
     li.textContent = projects[i].technologies[j];
     categories.appendChild(li);
   }
   content.appendChild(categories);
-  let button = document.createElement('button');
+  const button = document.createElement('button');
   button.textContent = 'See Project';
+  button.className = 'projectBtn';
   content.appendChild(button);
 
   section.appendChild(content);
 
   projectsSection.appendChild(section);
-}
 
+  button.addEventListener('click', () => {
+    const section = document.createElement('section');
+    section.className = 'details-popup';
+
+    const popupContents = document.createElement('div');
+    popupContents.className = 'popup-contents';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+
+    const header = document.createElement('header');
+    const h3 = document.createElement('h3');
+    h3.textContent = projects[i].name;
+    const modalCloseBtn = document.createElement('button');
+    modalCloseBtn.className = 'nohover';
+    const modalClose = document.createElement('img');
+    modalClose.src = 'images/close-black.svg';
+    modalClose.className = 'details-popup-close';
+    modalClose.setAttribute('alt', 'close');
+    modalCloseBtn.appendChild(modalClose);
+
+    header.appendChild(h3);
+    header.appendChild(modalCloseBtn);
+    popupContents.appendChild(header);
+
+    modalCloseBtn.addEventListener('click', () => {
+      section.classList.toggle('hide');
+    });
+
+    const canopy = document.createElement('div');
+    canopy.className = 'canopy';
+    const h6 = document.createElement('h6');
+    h6.textContent = projects[i].dept.name;
+    canopy.appendChild(h6);
+    const canopyLists = document.createElement('ul');
+    canopyLists.className = 'canopy-lists';
+    let li = document.createElement('li');
+    li.textContent = projects[i].dept.role;
+    canopyLists.appendChild(li);
+    li = document.createElement('li');
+    li.textContent = projects[i].dept.year;
+    canopyLists.appendChild(li);
+    canopy.appendChild(canopyLists);
+    popupContents.appendChild(canopy);
+
+    const popupImgDiv = document.createElement('div');
+    const popupImg = document.createElement('img');
+    popupImg.src = projects[i].featuredImage;
+    popupImg.className = 'popup-image';
+    popupImg.setAttribute('alt', 'project image');
+    popupImgDiv.appendChild(popupImg);
+    popupContents.appendChild(popupImgDiv);
+
+    const popupCategoriesBtnsDiv = document.createElement('div');
+    popupCategoriesBtnsDiv.className = 'popup-categories-buttons';
+
+    let div = document.createElement('div');
+    const description = document.createElement('p');
+    description.textContent = projects[i].description;
+    div.appendChild(description);
+    popupCategoriesBtnsDiv.appendChild(div);
+
+    div = document.createElement('div');
+
+    const categories = document.createElement('ul');
+    categories.className = 'categories';
+
+    for (let j = 0; j < projects[i].technologies.length; j += 1) {
+      const li = document.createElement('li');
+      li.textContent = projects[i].technologies[j];
+      categories.appendChild(li);
+    }
+    div.appendChild(categories);
+
+    const hr = document.createElement('hr');
+    div.appendChild(hr);
+
+    const detailsBtns = document.createElement('div');
+    detailsBtns.className = 'details-button';
+
+    const seeLiveBtn = document.createElement('button');
+    seeLiveBtn.textContent = 'See Live';
+    const seeLive = document.createElement('img');
+    seeLive.src = 'images/live.svg';
+    seeLive.setAttribute('alt', 'live icon');
+    seeLiveBtn.appendChild(seeLive);
+    detailsBtns.appendChild(seeLiveBtn);
+
+    const seeSourceBtn = document.createElement('button');
+    seeSourceBtn.textContent = 'See Source';
+    const seeSource = document.createElement('img');
+    seeSource.src = 'images/live.svg';
+    seeSource.setAttribute('alt', 'live icon');
+    seeSourceBtn.appendChild(seeSource);
+    detailsBtns.appendChild(seeSourceBtn);
+    div.appendChild(detailsBtns);
+
+    popupCategoriesBtnsDiv.appendChild(div);
+    popupContents.appendChild(popupCategoriesBtnsDiv);
+
+    overlay.appendChild(popupContents);
+    section.appendChild(overlay);
+
+    document.body.appendChild(section);
+  });
+}
