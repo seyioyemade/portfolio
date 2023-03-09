@@ -497,10 +497,12 @@ label {
 
 .details-button > button:nth-child(1) {
   padding: 1.4rem 2.6rem 1.4rem 2.2rem;
+  white-space: nowrap;
 }
 
 .details-button > button:nth-child(2) {
   padding: 1.4rem;
+  white-space: nowrap;
 }
 
 .details-button > button:nth-child(1) > img {

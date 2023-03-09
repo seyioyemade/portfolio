@@ -239,6 +239,17 @@ for (let i = 0; i < projects.length; i += 1) {
     seeSource.setAttribute('alt', 'live icon');
     seeSourceBtn.appendChild(seeSource);
     detailsBtns.appendChild(seeSourceBtn);
+
+    seeLiveBtn.addEventListener('click', () => {
+      window.location.href = projects[i].linkToLiveVersion;
+      section.classList.toggle('hide');
+    });
+
+    seeSourceBtn.addEventListener('click', () => {
+      window.location.href = projects[i].linkToSource;
+      section.classList.toggle('hide');
+    });
+
     div.appendChild(detailsBtns);
 
     popupCategoriesBtnsDiv.appendChild(div);
