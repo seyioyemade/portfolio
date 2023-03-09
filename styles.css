@@ -515,6 +515,13 @@ label {
   height: 20px;
 }
 
+.error {
+  font-size: 1.5rem;
+  display: block;
+  color: white;
+  margin-top: 0.5rem;
+}
+
 @media screen and (min-width: 768px) {
   header {
     position: fixed;
