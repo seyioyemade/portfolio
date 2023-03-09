@@ -267,12 +267,11 @@ const email = document.querySelector('#email');
 const emailError = document.querySelector('.error');
 const emailRegExp = /^[a-z0-9.!#$%&'+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)$/;
 
-form.addEventListener("submit", (event) => {
+form.addEventListener('submit', (event) => {
   if (emailRegExp.test(email.value)) {
-    emailError.textContent = "";
-
-  }else {
-    emailError.textContent = "Your responses were not sent. Kindly ensure your email address is in lower case.";
+    emailError.textContent = '';
+  } else {
+    emailError.textContent = 'Your responses were not sent. Kindly ensure your email address is in lower case.';
     event.preventDefault();
   }
 });
