@@ -262,15 +262,15 @@ for (let i = 0; i < projects.length; i += 1) {
   });
 }
 
-let userName = document.querySelector('#name');
-let userEmail = document.querySelector('#email');
-let userMsg = document.querySelector('#msg');
+const userName = document.querySelector('#name');
+const userEmail = document.querySelector('#email');
+const userMsg = document.querySelector('#msg');
 const form = document.querySelector('form');
 const emailError = document.querySelector('.error');
 const emailRegExp = /^[a-z0-9.!#$%&'+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)$/;
 
 form.addEventListener('submit', (event) => {
-  if (emailRegExp.test(email.value)) {
+  if (emailRegExp.test(userEmail.value)) {
     emailError.textContent = '';
     localStorage.clear();
   } else {
@@ -280,19 +280,14 @@ form.addEventListener('submit', (event) => {
 });
 
 form.addEventListener('input', () => {
-  let userInformation = {
+  const userInformation = {
     name: userName.value,
     email: userEmail.value,
-    msg: userMsg.value
+    msg: userMsg.value,
   };
 
   localStorage.setItem('userInformation', JSON.stringify(userInformation));
-
 });
-
- if (localStorage.getItem('userInformation')) {
-  setInformation();
-  }
 
 function setInformation() {
   const currentInformation = localStorage.getItem('userInformation');
@@ -302,6 +297,6 @@ function setInformation() {
   userMsg.value = currentInformationObj.msg;
 }
 
-
-
-
+if (localStorage.getItem('userInformation')) {
+  setInformation();
+}
