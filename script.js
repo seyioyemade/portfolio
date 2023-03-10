@@ -262,16 +262,41 @@ for (let i = 0; i < projects.length; i += 1) {
   });
 }
 
+const userName = document.querySelector('#name');
+const userEmail = document.querySelector('#email');
+const userMsg = document.querySelector('#msg');
 const form = document.querySelector('form');
-const email = document.querySelector('#email');
 const emailError = document.querySelector('.error');
 const emailRegExp = /^[a-z0-9.!#$%&'+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)$/;
 
 form.addEventListener('submit', (event) => {
-  if (emailRegExp.test(email.value)) {
+  if (emailRegExp.test(userEmail.value)) {
     emailError.textContent = '';
+    localStorage.clear();
   } else {
     emailError.textContent = 'Your responses were not sent. Kindly ensure your email address is in lower case.';
     event.preventDefault();
   }
 });
+
+form.addEventListener('input', () => {
+  const userInformation = {
+    name: userName.value,
+    email: userEmail.value,
+    msg: userMsg.value,
+  };
+
+  localStorage.setItem('userInformation', JSON.stringify(userInformation));
+});
+
+function setInformation() {
+  const currentInformation = localStorage.getItem('userInformation');
+  const currentInformationObj = JSON.parse(currentInformation);
+  userName.value = currentInformationObj.name;
+  userEmail.value = currentInformationObj.email;
+  userMsg.value = currentInformationObj.msg;
+}
+
+if (localStorage.getItem('userInformation')) {
+  setInformation();
+}
