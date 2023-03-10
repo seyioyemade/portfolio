@@ -279,7 +279,7 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-form.addEventListener('input', (event) => {
+form.addEventListener('input', () => {
   let userInformation = {
     name: userName.value,
     email: userEmail.value,
