@@ -93,6 +93,123 @@ const projects = [
   },
 ];
 
+const popupWindow = function (object) {
+  const section = document.createElement('section');
+  section.className = 'details-popup';
+
+  const popupContents = document.createElement('div');
+  popupContents.className = 'popup-contents';
+
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+
+  const header = document.createElement('header');
+  const h3 = document.createElement('h3');
+  h3.textContent = object.name;
+  const modalCloseBtn = document.createElement('button');
+  modalCloseBtn.className = 'nohover';
+  const modalClose = document.createElement('img');
+  modalClose.src = 'images/close-black.svg';
+  modalClose.className = 'details-popup-close';
+  modalClose.setAttribute('alt', 'close');
+  modalCloseBtn.appendChild(modalClose);
+
+  header.appendChild(h3);
+  header.appendChild(modalCloseBtn);
+  popupContents.appendChild(header);
+
+  modalCloseBtn.addEventListener('click', () => {
+    section.classList.toggle('hide');
+  });
+
+  const canopy = document.createElement('div');
+  canopy.className = 'canopy';
+  const h6 = document.createElement('h6');
+  h6.textContent = object.dept.name;
+  canopy.appendChild(h6);
+  const canopyLists = document.createElement('ul');
+  canopyLists.className = 'canopy-lists';
+  let li = document.createElement('li');
+  li.textContent = object.dept.role;
+  canopyLists.appendChild(li);
+  li = document.createElement('li');
+  li.textContent = object.dept.year;
+  canopyLists.appendChild(li);
+  canopy.appendChild(canopyLists);
+  popupContents.appendChild(canopy);
+
+  const popupImgDiv = document.createElement('div');
+  const popupImg = document.createElement('img');
+  popupImg.src = object.featuredImage;
+  popupImg.className = 'popup-image';
+  popupImg.setAttribute('alt', 'project image');
+  popupImgDiv.appendChild(popupImg);
+  popupContents.appendChild(popupImgDiv);
+
+  const popupCategoriesBtnsDiv = document.createElement('div');
+  popupCategoriesBtnsDiv.className = 'popup-categories-buttons';
+
+  let div = document.createElement('div');
+  const description = document.createElement('p');
+  description.textContent = object.description;
+  div.appendChild(description);
+  popupCategoriesBtnsDiv.appendChild(div);
+
+  div = document.createElement('div');
+
+  const categories = document.createElement('ul');
+  categories.className = 'categories';
+
+  for (let j = 0; j < object.technologies.length; j += 1) {
+    const li = document.createElement('li');
+    li.textContent = object.technologies[j];
+    categories.appendChild(li);
+  }
+  div.appendChild(categories);
+
+  const hr = document.createElement('hr');
+  div.appendChild(hr);
+
+  const detailsBtns = document.createElement('div');
+  detailsBtns.className = 'details-button';
+
+  const seeLiveBtn = document.createElement('button');
+  seeLiveBtn.textContent = 'See Live';
+  const seeLive = document.createElement('img');
+  seeLive.src = 'images/live.svg';
+  seeLive.setAttribute('alt', 'live icon');
+  seeLiveBtn.appendChild(seeLive);
+  detailsBtns.appendChild(seeLiveBtn);
+
+  const seeSourceBtn = document.createElement('button');
+  seeSourceBtn.textContent = 'See Source';
+  const seeSource = document.createElement('img');
+  seeSource.src = 'images/live.svg';
+  seeSource.setAttribute('alt', 'live icon');
+  seeSourceBtn.appendChild(seeSource);
+  detailsBtns.appendChild(seeSourceBtn);
+
+  seeLiveBtn.addEventListener('click', () => {
+    window.location.href = object.linkToLiveVersion;
+    section.classList.toggle('hide');
+  });
+
+  seeSourceBtn.addEventListener('click', () => {
+    window.location.href = object.linkToSource;
+    section.classList.toggle('hide');
+  });
+
+  div.appendChild(detailsBtns);
+
+  popupCategoriesBtnsDiv.appendChild(div);
+  popupContents.appendChild(popupCategoriesBtnsDiv);
+
+  overlay.appendChild(popupContents);
+  section.appendChild(overlay);
+
+  document.body.appendChild(section);
+};
+
 for (let i = 0; i < projects.length; i += 1) {
   const section = document.createElement('section');
   const featuredImageDiv = document.createElement('div');
@@ -145,120 +262,7 @@ for (let i = 0; i < projects.length; i += 1) {
   projectsSection.appendChild(section);
 
   button.addEventListener('click', () => {
-    const section = document.createElement('section');
-    section.className = 'details-popup';
-
-    const popupContents = document.createElement('div');
-    popupContents.className = 'popup-contents';
-
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-
-    const header = document.createElement('header');
-    const h3 = document.createElement('h3');
-    h3.textContent = projects[i].name;
-    const modalCloseBtn = document.createElement('button');
-    modalCloseBtn.className = 'nohover';
-    const modalClose = document.createElement('img');
-    modalClose.src = 'images/close-black.svg';
-    modalClose.className = 'details-popup-close';
-    modalClose.setAttribute('alt', 'close');
-    modalCloseBtn.appendChild(modalClose);
-
-    header.appendChild(h3);
-    header.appendChild(modalCloseBtn);
-    popupContents.appendChild(header);
-
-    modalCloseBtn.addEventListener('click', () => {
-      section.classList.toggle('hide');
-    });
-
-    const canopy = document.createElement('div');
-    canopy.className = 'canopy';
-    const h6 = document.createElement('h6');
-    h6.textContent = projects[i].dept.name;
-    canopy.appendChild(h6);
-    const canopyLists = document.createElement('ul');
-    canopyLists.className = 'canopy-lists';
-    let li = document.createElement('li');
-    li.textContent = projects[i].dept.role;
-    canopyLists.appendChild(li);
-    li = document.createElement('li');
-    li.textContent = projects[i].dept.year;
-    canopyLists.appendChild(li);
-    canopy.appendChild(canopyLists);
-    popupContents.appendChild(canopy);
-
-    const popupImgDiv = document.createElement('div');
-    const popupImg = document.createElement('img');
-    popupImg.src = projects[i].featuredImage;
-    popupImg.className = 'popup-image';
-    popupImg.setAttribute('alt', 'project image');
-    popupImgDiv.appendChild(popupImg);
-    popupContents.appendChild(popupImgDiv);
-
-    const popupCategoriesBtnsDiv = document.createElement('div');
-    popupCategoriesBtnsDiv.className = 'popup-categories-buttons';
-
-    let div = document.createElement('div');
-    const description = document.createElement('p');
-    description.textContent = projects[i].description;
-    div.appendChild(description);
-    popupCategoriesBtnsDiv.appendChild(div);
-
-    div = document.createElement('div');
-
-    const categories = document.createElement('ul');
-    categories.className = 'categories';
-
-    for (let j = 0; j < projects[i].technologies.length; j += 1) {
-      const li = document.createElement('li');
-      li.textContent = projects[i].technologies[j];
-      categories.appendChild(li);
-    }
-    div.appendChild(categories);
-
-    const hr = document.createElement('hr');
-    div.appendChild(hr);
-
-    const detailsBtns = document.createElement('div');
-    detailsBtns.className = 'details-button';
-
-    const seeLiveBtn = document.createElement('button');
-    seeLiveBtn.textContent = 'See Live';
-    const seeLive = document.createElement('img');
-    seeLive.src = 'images/live.svg';
-    seeLive.setAttribute('alt', 'live icon');
-    seeLiveBtn.appendChild(seeLive);
-    detailsBtns.appendChild(seeLiveBtn);
-
-    const seeSourceBtn = document.createElement('button');
-    seeSourceBtn.textContent = 'See Source';
-    const seeSource = document.createElement('img');
-    seeSource.src = 'images/live.svg';
-    seeSource.setAttribute('alt', 'live icon');
-    seeSourceBtn.appendChild(seeSource);
-    detailsBtns.appendChild(seeSourceBtn);
-
-    seeLiveBtn.addEventListener('click', () => {
-      window.location.href = projects[i].linkToLiveVersion;
-      section.classList.toggle('hide');
-    });
-
-    seeSourceBtn.addEventListener('click', () => {
-      window.location.href = projects[i].linkToSource;
-      section.classList.toggle('hide');
-    });
-
-    div.appendChild(detailsBtns);
-
-    popupCategoriesBtnsDiv.appendChild(div);
-    popupContents.appendChild(popupCategoriesBtnsDiv);
-
-    overlay.appendChild(popupContents);
-    section.appendChild(overlay);
-
-    document.body.appendChild(section);
+    popupWindow(projects[i]);
   });
 }
 
@@ -289,14 +293,10 @@ form.addEventListener('input', () => {
   localStorage.setItem('userInformation', JSON.stringify(userInformation));
 });
 
-function setInformation() {
+if (localStorage.getItem('userInformation')) {
   const currentInformation = localStorage.getItem('userInformation');
   const currentInformationObj = JSON.parse(currentInformation);
   userName.value = currentInformationObj.name;
   userEmail.value = currentInformationObj.email;
   userMsg.value = currentInformationObj.msg;
-}
-
-if (localStorage.getItem('userInformation')) {
-  setInformation();
 }
