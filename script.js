@@ -184,7 +184,7 @@ const popupWindow = function (object) {
   const seeSourceBtn = document.createElement('button');
   seeSourceBtn.textContent = 'See Source';
   const seeSource = document.createElement('img');
-  seeSource.src = 'images/live.svg';
+  seeSource.src = 'images/github-in-button.svg';
   seeSource.setAttribute('alt', 'live icon');
   seeSourceBtn.appendChild(seeSource);
   detailsBtns.appendChild(seeSourceBtn);
