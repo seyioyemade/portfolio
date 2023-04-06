@@ -8,6 +8,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -170,7 +174,7 @@ button:focus {
   color: #fff;
 }
 
-.details-button > button {
+.details-button button {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -269,6 +273,10 @@ p.bio {
   padding: 1.6rem 1.6rem 2.8rem 1.6rem;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
+}
+
+.works > section:nth-child(1) > div:nth-child(1) {
+  width: 100%;
 }
 
 .works p {
@@ -495,22 +503,22 @@ label {
   margin-right: 2rem;
 }
 
-.details-button > button:nth-child(1) {
-  padding: 1.4rem 2.6rem 1.4rem 2.2rem;
+.details-button button:nth-child(1) {
+  padding: 1.4rem 1.5rem 1.4rem 1.5rem;
   white-space: nowrap;
 }
 
-.details-button > button:nth-child(2) {
+.details-button button:nth-child(2) {
   padding: 1.4rem;
   white-space: nowrap;
 }
 
-.details-button > button:nth-child(1) > img {
+.details-button button:nth-child(1) > img {
   width: 16px;
   height: 16px;
 }
 
-.details-button > button:nth-child(2) > img {
+.details-button button:nth-child(2) > img {
   width: 18px;
   height: 20px;
 }
@@ -540,7 +548,6 @@ label {
   }
 
   a {
-    text-decoration: none;
     color: #344563;
   }
 
@@ -764,11 +771,11 @@ label {
     width: 48%;
   }
 
-  .details-button > button:nth-child(1) {
-    padding: 1rem 2.9rem 1rem 2.5rem;
+  .details-button button:nth-child(1) {
+    padding: 1rem 1.5rem 1rem 1.5rem;
   }
 
-  .details-button > button:nth-child(2) {
+  .details-button button:nth-child(2) {
     padding: 1rem 1.2rem;
   }
 }

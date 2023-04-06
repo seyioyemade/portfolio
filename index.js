@@ -21,21 +21,21 @@ for (let i = 0; i < mobileMenuIcons.length; i += 1) {
 
 const projects = [
   {
-    name: 'Tonic',
+    name: 'Twenties Leadership Summit 2023',
     dept: {
-      name: 'canopy',
-      role: 'Back End Dev',
-      year: 2015,
+      name: 'microverse',
+      role: 'Front End Dev',
+      year: 2023,
     },
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    description: 'Twenties Leadership Summit is a developmental program designed to create a profound shift in the thinking and behavior of twenties.',
     featuredImage: 'images/work1.png',
     technologies: [
       'html',
       'css',
       'javaScript',
     ],
-    linkToLiveVersion: '#',
-    linkToSource: '#',
+    linkToLiveVersion: 'https://seyioyemade.github.io/twenties-leadership-summit-2023/',
+    linkToSource: 'https://github.com/seyioyemade/twenties-leadership-summit-2023',
   },
 
   {
@@ -173,31 +173,29 @@ const popupWindow = function (object) {
   const detailsBtns = document.createElement('div');
   detailsBtns.className = 'details-button';
 
+  const liveAnchorLink = document.createElement('a');
+  liveAnchorLink.setAttribute('href', object.linkToLiveVersion);
+  liveAnchorLink.setAttribute('target', '_blank');
   const seeLiveBtn = document.createElement('button');
   seeLiveBtn.textContent = 'See Live';
   const seeLive = document.createElement('img');
   seeLive.src = 'images/live.svg';
   seeLive.setAttribute('alt', 'live icon');
   seeLiveBtn.appendChild(seeLive);
-  detailsBtns.appendChild(seeLiveBtn);
+  liveAnchorLink.appendChild(seeLiveBtn);
+  detailsBtns.appendChild(liveAnchorLink);
 
+  const sourceAnchorLink = document.createElement('a');
+  sourceAnchorLink.setAttribute('href', object.linkToSource);
+  sourceAnchorLink.setAttribute('target', '_blank');
   const seeSourceBtn = document.createElement('button');
   seeSourceBtn.textContent = 'See Source';
   const seeSource = document.createElement('img');
   seeSource.src = 'images/github-in-button.svg';
-  seeSource.setAttribute('alt', 'live icon');
+  seeSource.setAttribute('alt', 'source icon');
   seeSourceBtn.appendChild(seeSource);
-  detailsBtns.appendChild(seeSourceBtn);
-
-  seeLiveBtn.addEventListener('click', () => {
-    window.location.href = object.linkToLiveVersion;
-    section.classList.toggle('hide');
-  });
-
-  seeSourceBtn.addEventListener('click', () => {
-    window.location.href = object.linkToSource;
-    section.classList.toggle('hide');
-  });
+  sourceAnchorLink.appendChild(seeSourceBtn);
+  detailsBtns.appendChild(sourceAnchorLink);
 
   div.appendChild(detailsBtns);
 
