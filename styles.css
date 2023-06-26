@@ -232,8 +232,9 @@ button:focus {
 }
 
 .logo {
-  width: 76px;
-  height: 20px;
+  font-size: 1.5rem;
+  color: #6070ff;
+  font-weight: 500;
   animation-duration: 3s;
   animation-name: rotate;
 }
@@ -273,6 +274,15 @@ p.bio {
   padding: 1.6rem 1.6rem 2.8rem 1.6rem;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
+}
+
+.contact-form > div {
+  padding: 10.3rem 2.4rem 4.5rem 2.4rem;
+  background: #6070ff url("images/contact-form-mobile-bg.png") no-repeat right;
+  background-size: contain;
+  border-top-left-radius: 9rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .works > section:nth-child(1) > div:nth-child(1) {
@@ -386,15 +396,6 @@ h2 {
 .contact-form {
   background-color: #fff;
   padding: 0;
-}
-
-.contact-form > div {
-  padding: 10.3rem 2.4rem 4.5rem 2.4rem;
-  background: #6070ff url("images/contact-form-mobile-bg.png") no-repeat right;
-  background-size: contain;
-  border-top-left-radius: 9rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .contact-form h2,
@@ -530,6 +531,10 @@ label {
   margin-top: 0.5rem;
 }
 
+.get-resume {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   header {
     position: fixed;
@@ -641,6 +646,7 @@ label {
 
   .works > section .content {
     padding: 2.4rem;
+    width: 70%;
   }
 
   h3 {
