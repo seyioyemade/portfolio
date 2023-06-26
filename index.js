@@ -21,6 +21,25 @@ for (let i = 0; i < mobileMenuIcons.length; i += 1) {
 
 const projects = [
   {
+    name: 'Movie Application',
+    dept: {
+      name: 'microverse',
+      role: 'Front End Dev',
+      year: 2023,
+    },
+    description: 'Movie Application involves the use of API to fetch and interact with some movies data on the website.',
+    featuredImage: 'images/work4.png',
+    technologies: [
+      'html',
+      'css',
+      'javaScript',
+      'Webpack',
+    ],
+    linkToLiveVersion: 'https://seyioyemade.github.io/movie-application/dist/',
+    linkToSource: 'https://github.com/seyioyemade/movie-application',
+  },
+
+  {
     name: 'Twenties Leadership Summit 2023',
     dept: {
       name: 'microverse',
@@ -74,23 +93,6 @@ const projects = [
     linkToSource: '#',
   },
 
-  {
-    name: 'Multi-Post Stories',
-    dept: {
-      name: 'canopy',
-      role: 'Back End Dev',
-      year: 2015,
-    },
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    featuredImage: 'images/work4.png',
-    technologies: [
-      'html',
-      'css',
-      'javaScript',
-    ],
-    linkToLiveVersion: '#',
-    linkToSource: '#',
-  },
 ];
 
 const popupWindow = function (object) {

@@ -232,8 +232,9 @@ button:focus {
 }
 
 .logo {
-  width: 76px;
-  height: 20px;
+  font-size: 1.5rem;
+  color: #6070ff;
+  font-weight: 500;
   animation-duration: 3s;
   animation-name: rotate;
 }
@@ -530,6 +531,10 @@ label {
   margin-top: 0.5rem;
 }
 
+.get-resume {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   header {
     position: fixed;
@@ -641,6 +646,7 @@ label {
 
   .works > section .content {
     padding: 2.4rem;
+    width: 70%;
   }
 
   h3 {
