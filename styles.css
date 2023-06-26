@@ -276,6 +276,15 @@ p.bio {
   border-radius: 16px;
 }
 
+.contact-form > div {
+  padding: 10.3rem 2.4rem 4.5rem 2.4rem;
+  background: #6070ff url("images/contact-form-mobile-bg.png") no-repeat right;
+  background-size: contain;
+  border-top-left-radius: 9rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .works > section:nth-child(1) > div:nth-child(1) {
   width: 100%;
 }
@@ -387,15 +396,6 @@ h2 {
 .contact-form {
   background-color: #fff;
   padding: 0;
-}
-
-.contact-form > div {
-  padding: 10.3rem 2.4rem 4.5rem 2.4rem;
-  background: #6070ff url("images/contact-form-mobile-bg.png") no-repeat right;
-  background-size: contain;
-  border-top-left-radius: 9rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .contact-form h2,
